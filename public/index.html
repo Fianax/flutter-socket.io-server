@@ -26,6 +26,15 @@
         socket.on('mensaje', function(payload){
             console.log('Escuchando:', payload);
         });
+
+        socket.on('nuevo-mensaje', function (payload) {
+            console.log('Flutter dice: ', payload);
+        });
+
+        socket.on('pokemon-registrados', function (payload) {
+            console.clear();
+            console.table(payload);
+        });
     </script>
 </body>
 </html>
